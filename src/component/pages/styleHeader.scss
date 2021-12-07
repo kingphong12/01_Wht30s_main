@@ -1,0 +1,120 @@
+@import "../../scss/avairables.scss";
+
+.top-bar {
+  padding: 27px 0;
+  max-width: 1920px;
+  background-color: var(--black-two);
+  margin: 0 auto;
+  position: sticky;
+}
+
+.box-logo {
+  width: 226px;
+  height: 26px;
+  padding-left: 97px;
+  @media (max-width: 1919px) {
+    padding-left: 1.6rem;
+  }
+  img {
+    // width: 100%;
+    // object-fit: cover;
+  }
+}
+
+.top-menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 120px;
+  margin-bottom: 0;
+  @media (max-width: 1919px) {
+    padding-right: 1.6rem;
+  }
+  @media (max-width: $md) {
+    display: none;
+  }
+  &__item {
+    padding: 0 2.5rem;
+    @media (max-width: $xl) {
+      padding: 0 1rem;
+    }
+    @media (max-width: $lg) {
+      padding: 0 0.8rem;
+    }
+    &_link {
+      color: var(--white);
+      font-size: $font-size-14;
+      font-weight: normal;
+      @media (max-width: $xl) {
+        font-size: $font-size-xl;
+      }
+      @media (max-width: $lg) {
+        font-size: $font-size-lg;
+      }
+    }
+    &:nth-child(3) {
+      border-right: 1px solid var(--white);
+    }
+  }
+}
+
+.menu-icon {
+  display: none;
+  width: 4rem;
+  height: 4rem;
+  color: var(--white);
+  margin-right: 3rem;
+  @media (max-width: $md) {
+    display: block;
+  }
+  .out-line-menu {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+.wrapper-dropdown-menu {
+  margin-top: 0;
+  z-index: 1;
+  display: none;
+  background-color: var(--black-two);
+  animation: dropdown-memu linear 0.5s;
+  .d-block {
+    display: block;
+  }
+}
+
+.menu-inner {
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  .item-dropdown-menu {
+    padding: 0.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &_link {
+      text-align: center;
+      color: var(--white);
+    }
+  }
+  &.d-block {
+    display: block;
+  }
+}
+
+@keyframes dropdown-memu {
+  to {
+    opacity: 0;
+    margin-top: 0;
+  }
+  from {
+    margin-top: -12.8rem;
+    opacity: 1;
+  }
+}

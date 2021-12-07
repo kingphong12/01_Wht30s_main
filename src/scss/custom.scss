@@ -1,0 +1,63 @@
+@import "./reset.scss";
+@import "./text.scss";
+@import "./avairables.scss";
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 540px,
+  md: 720px,
+  lg: 970px,
+  xl: 1400px,
+  xxl: 1920px,
+);
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1400px,
+  xxl: 1936px,
+);
+
+$grid-gutter-width: 9px;
+
+:root {
+  --black: #1a1a1a;
+  --tomato: #ea4913;
+  --cerulean: #0565bb;
+  --white-two: #eee;
+  --kelley-green: #00833f;
+  --lavender: #c6b8f5;
+  --dark-brown: #110e03;
+  --bright-orange-two: #f50;
+  --mango: #ffb225;
+  --tomato-two: #e84c33;
+  --bluish: #2584b3;
+  --sand: #dabb5e;
+  --copper: #c73c27;
+  --mango-two: #ffb227;
+  --eggshell: #fffbd8;
+  --tomato-three: #e0412a;
+  --light-grey: #ced1c8;
+  --pinkish-grey: #d4c4ab;
+  --cloudy-blue: #b1d1cf;
+  --light-grey-two: #d8dad7;
+  --mid-blue: #245fc5;
+  --greyish: #a9a9a9;
+  --sun-yellow: #fcd32a;
+  --golden-yellow: #ffc717;
+  --black-four: #333;
+  --dark: #1c2027;
+  --white-three: #f4f4f4;
+  --brownish-grey: #666;
+  --pumpkin-orange: #fa7b26;
+  --pinkish-grey-two: #ccc8c6;
+  --white-four: #f1f1f1;
+  --bright-orange: #f96400;
+  --black-two: #111;
+  --dark-maroon: #020001;
+  --white: #fff;
+  --black-three: #222;
+}
+
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
