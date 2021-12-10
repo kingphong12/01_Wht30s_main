@@ -1,15 +1,15 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Header from "./component/pages/Header";
-import Main from "./component/pages/Main";
-import Footer from "./component/pages/Footer";
+import HomePage from "./component/pages/HomePage";
+import Footer from "./feature/footer/Footer";
+import Header from "./feature/header/Header";
 
 function App() {
   return (
     <Router>
       <Header />
       <Switch>
-        <Route path="/" component={Main} />
+        <Route path="/" component={HomePage} />
       </Switch>
       <Footer />
     </Router>

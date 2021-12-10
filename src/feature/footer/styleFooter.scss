@@ -1,0 +1,116 @@
+@import "../../scss/avairables.scss";
+.wrapper-footer {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+@mixin item-link($align, $color-text) {
+  .footer-item-link {
+    font-size: $font-size-14;
+    font-weight: $font-weight-brand;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    text-align: $align;
+    color: $color-text;
+    display: block;
+    @media (max-width: 1023px) {
+      font-size: $font-size-10;
+    }
+    @media (max-width: 1023px) {
+      font-size: $font-size-8;
+    }
+  }
+}
+
+@mixin fotter-info($align, $color-text) {
+  h3 {
+    font-size: $font-size-14;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 2.14;
+    letter-spacing: normal;
+    text-align: $align;
+    color: $color-text;
+    margin-bottom: 31px;
+    @media (max-width: 1024px) {
+      font-size: $font-size-10;
+      margin-bottom: 12px;
+    }
+    @media (max-width: 1024px) {
+      font-size: $font-size-8;
+    }
+  }
+  @include item-link($align, $color-text);
+}
+
+.footer {
+  width: 100%;
+  &-inner {
+    width: 89.58%;
+    margin: 0 auto;
+  }
+  &-inner-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 49px 0 60px 0;
+    &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      // width: 50%;
+      @include fotter-info(left, #111);
+    }
+    &__right {
+      width: 50%;
+      display: flex;
+      justify-content: end;
+      @media (max-width: 719px) {
+        width: 60%;
+      }
+      &-item {
+        // width: 12.79%;
+        &:not(&:last-child) {
+          margin-right: 84px;
+          @media (max-width: 1919px) {
+            margin-right: 34px;
+          }
+          @media (max-width: 1279px) {
+            margin-right: 18px;
+          }
+          @media (max-width: 719px) {
+            margin-right: 8px;
+          }
+        }
+        @include fotter-info(left, #111);
+      }
+    }
+  }
+  &-inner-bottom {
+    display: flex;
+    padding-bottom: 113px;
+    justify-content: space-between;
+    @media (max-width: 1023px) {
+      padding-bottom: 50px;
+    }
+    &-left {
+      width: 50%;
+      @include fotter-info(left, #a9a9a9);
+    }
+    &-right {
+      width: 50%;
+      display: flex;
+      justify-content: flex-end;
+      &-item {
+        list-style: none;
+        &:not(:last-child) {
+          margin-right: 23px;
+        }
+      }
+      .bottom-item-link {
+        text-decoration: none;
+      }
+    }
+  }
+}

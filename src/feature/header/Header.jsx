@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import { Col, Container, Modal, Row } from "reactstrap";
+import { Col, Container, Row } from "reactstrap";
 import Logo from "../../images/logo/logo.png";
 import { AiOutlineMenu } from "react-icons/ai";
 import "./styleHeader.scss";
@@ -37,35 +37,29 @@ const Header = () => {
   return (
     <>
       <div className="top-bar">
-        <Container fluid="xxl">
-          <Row className="justify-content-between align-items-center">
-            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto" xxl="auto">
-              <div className="box-logo">
-                <img src={Logo} alt="logo" />
-              </div>
-            </Col>
-            <Col xs="auto" sm="auto" md="auto" lg="auto" xl="auto" xxl="auto">
-              <ul className="top-menu">
-                {menuList &&
-                  menuList.map((menuItem, index) => {
-                    return (
-                      <li className="top-menu__item" key={index}>
-                        <Link
-                          className="top-menu__item_link Text-Style-11"
-                          to={menuItem.to}
-                        >
-                          {menuItem.title}
-                        </Link>
-                      </li>
-                    );
-                  })}
-              </ul>
-              <div className="menu-icon" onClick={toogleMenu}>
-                <AiOutlineMenu className="out-line-menu" />
-              </div>
-            </Col>
-          </Row>
-        </Container>
+        <div className="containr-top-nav">
+          <div className="box-logo">
+            <img src={Logo} alt="logo" />
+          </div>
+          <ul className="top-menu">
+            {menuList &&
+              menuList.map((menuItem, index) => {
+                return (
+                  <li className="top-menu__item" key={index}>
+                    <Link
+                      className="top-menu__item_link Text-Style-11"
+                      to={menuItem.to}
+                    >
+                      {menuItem.title}
+                    </Link>
+                  </li>
+                );
+              })}
+          </ul>
+          <div className="menu-icon" onClick={toogleMenu}>
+            <AiOutlineMenu className="out-line-menu" />
+          </div>
+        </div>
       </div>
       <div
         className={

@@ -1,19 +1,36 @@
 @import "../../scss/avairables.scss";
 
 .top-bar {
-  padding: 27px 0;
+  // padding: 27px 0;
   max-width: 1920px;
   background-color: var(--black-two);
   margin: 0 auto;
   position: sticky;
 }
 
+.containr-top-nav {
+  max-width: 1929px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 27px 120px 27px 97px;
+  @media (max-width: 1280px) {
+    padding: 27px 60px 27px 60px;
+  }
+  @media (max-width: 1024px) {
+    padding: 27px 40px 27px 40px;
+  }
+  @media (max-width: 970px) {
+    padding: 27px 18px 27px 18px;
+  }
+}
+
 .box-logo {
-  width: 226px;
-  height: 26px;
-  padding-left: 97px;
+  // width: 226px;
+  // height: 26px;
+  // padding-left: 97px;
   @media (max-width: 1919px) {
-    padding-left: 1.6rem;
+    // padding-left: 1.6rem;
   }
   img {
     // width: 100%;
@@ -25,31 +42,28 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 120px;
+  // padding-right: 120px;
   margin-bottom: 0;
-  @media (max-width: 1919px) {
-    padding-right: 1.6rem;
-  }
+  padding: 0;
   @media (max-width: $md) {
     display: none;
   }
   &__item {
     padding: 0 2.5rem;
-    @media (max-width: $xl) {
+    @media (max-width: 1280px) {
       padding: 0 1rem;
     }
-    @media (max-width: $lg) {
-      padding: 0 0.8rem;
-    }
     &_link {
-      color: var(--white);
       font-size: $font-size-14;
       font-weight: normal;
-      @media (max-width: $xl) {
-        font-size: $font-size-xl;
-      }
-      @media (max-width: $lg) {
-        font-size: $font-size-lg;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.8;
+      letter-spacing: normal;
+      text-align: center;
+      color: var(--white);
+      @media (max-width: 969px) {
+        font-size: $font-size-10;
       }
     }
     &:nth-child(3) {
@@ -64,7 +78,7 @@
   height: 4rem;
   color: var(--white);
   margin-right: 3rem;
-  @media (max-width: $md) {
+  @media (max-width: 720px) {
     display: block;
   }
   .out-line-menu {
