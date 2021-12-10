@@ -164,7 +164,7 @@ const Main = () => {
             걸음을 내딛어보세요. 비디오를 단 몇 분 만에 제작해보세요.
           </p>
         </div>
-        <span className="shap"></span>
+        {/* <span className="shap"></span> */}
         <div className="brand-story__box">
           <div className="brand-story__box-img">
             <img className="img" src={Img} alt="Img" />
