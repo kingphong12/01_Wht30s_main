@@ -109,17 +109,17 @@ const Footer = () => {
             </div>
             <ul className="footer-inner-bottom-right">
               <li className="footer-inner-bottom-right-item">
-                <Link className="bottom-item-link">
+                <Link className="bottom-item-link" to="#">
                   <img src={snSicon01} alt="snSicon1" />
                 </Link>
               </li>
               <li className="footer-inner-bottom-right-item">
-                <Link className="bottom-item-link">
+                <Link className="bottom-item-link" to="#">
                   <img src={snSicon02} alt="snSicon2" />
                 </Link>
               </li>
               <li className="footer-inner-bottom-right-item">
-                <Link className="bottom-item-link">
+                <Link className="bottom-item-link" to="#">
                   <img src={snSicon03} alt="snSicon3" />
                 </Link>
               </li>
